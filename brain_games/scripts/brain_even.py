@@ -5,9 +5,6 @@ from brain_games.parity_check import welcome_user
 
 
 def main():
-    print('Welcome to the Brain Games!')
-    welcome_user(main)
-    print('Answer "yes" if the number is even, otherwise answer "no".')
     parity_check_game()
 
 

@@ -2,13 +2,17 @@ from random import randint
 import prompt
 
 
-def welcome_user(name):
+def welcome_user():
+    print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello {name}!')
+    return name
 
+name = welcome_user()
 
 # function to determine the parity of a random number
 def parity_check_game():
+    print('Answer "yes" if the number is even, otherwise answer "no".')
     for _ in range(3):  # number of attempts
         random_number = randint(1, 20)
         print(f'Question: {random_number}')  # question asked to the user
@@ -25,7 +29,7 @@ def parity_check_game():
         else:
             print('Correct!')
     end_game()
-
+    return user_response, correct_answer
 
 def end_game():
     if user_response != correct_answer:
