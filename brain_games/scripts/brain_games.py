@@ -1,7 +1,7 @@
 from brain_games.cli import welcome_user
 
 
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 
 
 def main():
