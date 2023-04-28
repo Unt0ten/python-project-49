@@ -1,22 +1,27 @@
 from brain_games.game_logic import game_logic
 from random import randint, choice
 
-game_conditions = 'What is the result of the expression?'
+
+def game_conditions():
+    print('What is the result of the expression?')
+    return None
 
 
-def question():
+def question_generator():
     first_random_number = randint(1, 20)
     second_random_number = randint(1, 20)
     operator = choice(['-', '+', '*'])
-    print(f'{first_random_number} {operator} {second_random_number}')
-    if operator == '-':
-        result = first_random_number - second_random_number
-    elif operator == '+:':
-        result = first_random_number + second_random_number
-    elif operator == '*':
-        result = first_random_number * second_random_number
-    return result
+    question = f'{first_random_number} {operator} {second_random_number}'
+    return question
 
-correct_answer =
 
-game_logic(game_conditions, question, correct_answer)
+def correct_answer(question):
+    if question in '-':
+        correct_answer = first_random_number - second_random_number
+    elif question in '+:':
+        correct_answer = first_random_number + second_random_number
+    elif question in '*':
+        correct_answer = first_random_number * second_random_number
+    return correct_answer
+
+game_logic(game_conditions, question_generator, correct_answer)

@@ -2,15 +2,19 @@ from brain_games.game_logic import game_logic
 from random import randint
 
 
-def question():
-    random_number = randint(1, 20)
-    return random_number
+def game_conditions():
+    print('Answer "yes" if the number is even, otherwise answer "no".')
+    return None
+
+
+def question_generator():
+    question = randint(1, 20)
+    return question
 
 
 def correct_answer(question):
-    correct_answer = 'yes' if question() % 2 == 0 else 'no'
+    correct_answer = 'yes' if question % 2 == 0 else 'no'
     return correct_answer
 
-game_conditions = 'Answer "yes" if the number is even, otherwise answer "no".'
 
-game_logic(game_conditions, question, correct_answer)
+game_logic(game_conditions, question_generator, correct_answer)
