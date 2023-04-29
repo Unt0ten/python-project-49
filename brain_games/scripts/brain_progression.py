@@ -1,4 +1,4 @@
-from brain_games.games.brain_calc_game import game_logic
+from brain_games.games.brain_progression_game import game_logic
 
 
 #!/usr/bin/env python3
