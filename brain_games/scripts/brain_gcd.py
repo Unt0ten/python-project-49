@@ -1,4 +1,4 @@
-from brain_games.games.brain_even_game import game_logic
+from brain_games.games.brain_gcd_game import game_logic
 
 
 #!/usr/bin/env python3
@@ -6,7 +6,6 @@ from brain_games.games.brain_even_game import game_logic
 
 def main():
     game_logic()
-
 
 
 if __name__ == '__main__':
