@@ -4,7 +4,7 @@ import math
 
 
 def game_conditions():
-    print('What is the result of the expression?')
+    print('Find the greatest common divisor of given numbers.')
     return None
 
 
