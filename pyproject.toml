@@ -1,12 +1,13 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Games for the development of mathematical calculations in the mind"
 authors = ["Alexandr Sakhatov <sakhatoff@gmail.com>"]
 readme = "README.md"
 packages = [
   { include = "brain_games" },
 ]
+repository = "https://github.com/Unt0ten/python-project-49"
 
 [tool.poetry.dependencies]
 python = "^3.10"

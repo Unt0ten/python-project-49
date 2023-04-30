@@ -28,7 +28,7 @@ def correct_answer(answer):
     i = answer.index('..')  # find index of value '..'
     # find difference of arithmetic progression depending on the index
     # if the index of the difference of the arithmetic progression is the last:
-    if i == len(answer) - 1:
+    if i == len(answer) - 1 or i == len(answer) - 2:
         diff_of_an_arith = int(answer[1]) - int(answer[0])
         correct_answer = int(answer[i - 1]) + diff_of_an_arith
     # if the index of the difference of the arithmetic progression is the first:
