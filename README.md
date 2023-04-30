@@ -2,12 +2,12 @@
 
 [![Actions Status](https://github.com/Unt0ten/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/Unt0ten/python-project-49/actions)
 
-https://asciinema.org/a/6dDvFd8AGdtVDzQFksfmojNbi
+Game 'brain-even' https://asciinema.org/a/6dDvFd8AGdtVDzQFksfmojNbi
 
-https://asciinema.org/a/ALde2VFQxPLPyaeAq6qfcRz0t
+Game 'brain-calc' https://asciinema.org/a/ALde2VFQxPLPyaeAq6qfcRz0t
 
-https://asciinema.org/a/yrKZvNqDov7Z7o5vHfPlulxEX
+Game 'brain-progression' https://asciinema.org/a/yrKZvNqDov7Z7o5vHfPlulxEX
 
-https://asciinema.org/a/XLQvQqDiif6TroIkMLuvxENMt
+Game 'brain-gcd' https://asciinema.org/a/XLQvQqDiif6TroIkMLuvxENMt
 
-https://asciinema.org/a/MbX4ygfW5ud2qlMU1wX8zjz6p
+Game 'brain-prime' https://asciinema.org/a/MbX4ygfW5ud2qlMU1wX8zjz6p

@@ -14,7 +14,9 @@ def game_logic(game_conditions, question_generator, correct_answer):
             print('Correct!')
         else:
             print(
-                f"'{user_response}' is wrong answer ;(. Correct answer was '{correct_answer(question)}'. Let's try again, {name}!")
+                f"'{user_response}' is wrong answer ;(. "
+                f"Correct answer was '{correct_answer(question)}'. "
+                f"Let's try again, {name}!")
             exit()
     print(f'Congratulations, {name}!')
     exit()
