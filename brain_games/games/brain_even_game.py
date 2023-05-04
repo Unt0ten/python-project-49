@@ -1,4 +1,3 @@
-from brain_games.game_logic import game_logic
 from random import randint
 
 
@@ -8,13 +7,12 @@ def game_conditions():
 
 
 def question_generator():
-    question = randint(1, 20)
+    lower_range_limit = 1
+    upper_range_limit = 20
+    question = randint(lower_range_limit, upper_range_limit)
     return question
 
 
 def correct_answer(question):
     correct_answer = 'yes' if question % 2 == 0 else 'no'
     return correct_answer
-
-
-game_logic(game_conditions, question_generator, correct_answer)

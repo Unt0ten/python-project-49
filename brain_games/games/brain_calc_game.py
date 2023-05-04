@@ -1,4 +1,3 @@
-from brain_games.game_logic import game_logic
 from random import randint, choice
 
 
@@ -8,8 +7,10 @@ def game_conditions():
 
 
 def question_generator():
-    first_random_number = randint(1, 20)
-    second_random_number = randint(1, 10)
+    lower_range_limit = 1
+    upper_range_limit = 20
+    first_random_number = randint(lower_range_limit, upper_range_limit)
+    second_random_number = randint(lower_range_limit, upper_range_limit)
     operator = choice(['-', '+', '*'])
     answer = f'{first_random_number} {operator} {second_random_number}'
     return answer
@@ -17,13 +18,13 @@ def question_generator():
 
 def correct_answer(answer):
     answer = answer.split(' ')
-    if '-' in answer[1]:
-        correct_answer = int(answer[0]) - int(answer[2])
-    elif '+' in answer[1]:
-        correct_answer = int(answer[0]) + int(answer[2])
-    elif '*' in answer[1]:
-        correct_answer = int(answer[0]) * int(answer[2])
+    f_num_index = 0  # first number index
+    s_num_index = 2  # second number index
+    operator_index = 1
+    if '-' in answer[operator_index]:
+        correct_answer = int(answer[f_num_index]) - int(answer[s_num_index])
+    elif '+' in answer[operator_index]:
+        correct_answer = int(answer[f_num_index]) + int(answer[s_num_index])
+    elif '*' in answer[operator_index]:
+        correct_answer = int(answer[f_num_index]) * int(answer[s_num_index])
     return str(correct_answer)
-
-
-game_logic(game_conditions, question_generator, correct_answer)

@@ -6,7 +6,8 @@ def game_logic(game_conditions, question_generator, correct_answer):
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     game_conditions()
-    for _ in range(3):
+    number_of_rounds = 3
+    for _ in range(number_of_rounds):
         question = question_generator()
         print(f'Question: {question}')
         user_response = input()
