@@ -1,15 +1,12 @@
 from random import randint
 
-
-def game_conditions():
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    return None
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+LOWER_RANGE_LIMIT = 2
+UPPER_RANGE_LIMIT = 20
 
 
 def question_generator():
-    lower_range_limit = 2
-    upper_range_limit = 20
-    question = randint(lower_range_limit, upper_range_limit)
+    question = randint(LOWER_RANGE_LIMIT, UPPER_RANGE_LIMIT)
     return question
 
 

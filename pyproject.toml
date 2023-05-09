@@ -8,6 +8,12 @@ packages = [
   { include = "brain_games" },
 ]
 repository = "https://github.com/Unt0ten/python-project-49"
+classifiers = [
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Intended Audience :: Users",
+        "Topic :: Libraries :: Python Modules",
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"

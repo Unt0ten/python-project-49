@@ -1,16 +1,16 @@
 from random import randint, choice
 
-
-def game_conditions():
-    print('What is the result of the expression?')
-    return None
+DESCRIPTION = 'What is the result of the expression?'
+LOWER_RANGE_LIMIT = 1
+UPPER_RANGE_LIMIT = 20
+F_NUM_INDEX = 0  # first number index
+S_NUM_INDEX = 2  # second number index
+OPERATOR_INDEX = 1
 
 
 def question_generator():
-    lower_range_limit = 1
-    upper_range_limit = 20
-    first_random_number = randint(lower_range_limit, upper_range_limit)
-    second_random_number = randint(lower_range_limit, upper_range_limit)
+    first_random_number = randint(LOWER_RANGE_LIMIT, UPPER_RANGE_LIMIT)
+    second_random_number = randint(LOWER_RANGE_LIMIT, UPPER_RANGE_LIMIT)
     operator = choice(['-', '+', '*'])
     answer = f'{first_random_number} {operator} {second_random_number}'
     return answer
@@ -18,13 +18,10 @@ def question_generator():
 
 def correct_answer(answer):
     answer = answer.split(' ')
-    f_num_index = 0  # first number index
-    s_num_index = 2  # second number index
-    operator_index = 1
-    if '-' in answer[operator_index]:
-        correct_answer = int(answer[f_num_index]) - int(answer[s_num_index])
-    elif '+' in answer[operator_index]:
-        correct_answer = int(answer[f_num_index]) + int(answer[s_num_index])
-    elif '*' in answer[operator_index]:
-        correct_answer = int(answer[f_num_index]) * int(answer[s_num_index])
+    if '-' in answer[OPERATOR_INDEX]:
+        correct_answer = int(answer[F_NUM_INDEX]) - int(answer[S_NUM_INDEX])
+    elif '+' in answer[OPERATOR_INDEX]:
+        correct_answer = int(answer[F_NUM_INDEX]) + int(answer[S_NUM_INDEX])
+    elif '*' in answer[OPERATOR_INDEX]:
+        correct_answer = int(answer[F_NUM_INDEX]) * int(answer[S_NUM_INDEX])
     return str(correct_answer)

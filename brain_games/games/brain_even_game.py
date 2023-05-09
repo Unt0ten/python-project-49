@@ -1,15 +1,12 @@
 from random import randint
 
-
-def game_conditions():
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    return None
+DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
+LOWER_RANGE_LIMIT = 1
+UPPER_RANGE_LIMIT = 20
 
 
 def question_generator():
-    lower_range_limit = 1
-    upper_range_limit = 20
-    question = randint(lower_range_limit, upper_range_limit)
+    question = randint(LOWER_RANGE_LIMIT, UPPER_RANGE_LIMIT)
     return question
 
 
