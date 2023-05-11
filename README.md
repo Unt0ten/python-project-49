@@ -2,6 +2,8 @@
 
 [![Actions Status](https://github.com/Unt0ten/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/Unt0ten/python-project-49/actions)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/dd703728d3d8ad60d065/maintainability)](https://codeclimate.com/github/Unt0ten/python-project-49/maintainability)
+
 "Games for the development of mathematical calculations in the mind"
 
 
