@@ -1,25 +1,29 @@
-from random import randint, choice
+from random import randint
 
 DESCRIPTION = 'What number is missing in the progression?'
-LOWER_RANGE_LIMIT = 2
-UPPER_RANGE_LIMIT = 20
-LOW_LEN_PROG = 5  # lower bound on the length of an arithmetic progression
-UPP_LEN_PROG = 10  # upper bound on the length of an arithmetic progression
+LOWER_RANGE = 2
+UPPER_RANGE = 20
+START_SEGMENT = 5  # lower bound on the length of an arithmetic progression
+END_SEGMENT = 10  # upper bound on the length of an arithmetic progression
+
+
+def generate_progression(start, finish, step):
+    progression_list = [str(n) for n in range(start, finish, step)]
+    return progression_list
 
 
 def get_game_data():
-    # a_prog - arithmetic progression
-    # the difference of the arithmetic progression
-    d_arith = randint(LOWER_RANGE_LIMIT, UPPER_RANGE_LIMIT)
+    # the step of the arithmetic progression
+    step = randint(LOWER_RANGE, UPPER_RANGE)
     # start of arithmetic progression
-    start_a_prog = randint(LOWER_RANGE_LIMIT, UPPER_RANGE_LIMIT)
+    start = randint(LOWER_RANGE, UPPER_RANGE)
     # length of an arithmetic progression
-    len_a_prog = randint(LOW_LEN_PROG, UPP_LEN_PROG)
-    end_a_prog = start_a_prog + d_arith * len_a_prog
-    # create a list of arithmetic sequence
-    a_prog = [str(n) for n in range(start_a_prog, end_a_prog, d_arith)]
-    i = a_prog.index(choice(a_prog))  # the index of the element to be removed
-    answer = a_prog[i]
-    a_prog[i] = '..'
-    question = ' '.join(a_prog)
+    length = randint(START_SEGMENT, END_SEGMENT)
+    finish = start + step * length
+
+    progression_list = generate_progression(start, finish, step)
+    missing_item = randint(0, length - 1)
+    answer = progression_list[missing_item]
+    progression_list[missing_item] = '..'
+    question = ' '.join(progression_list)
     return question, str(answer)
